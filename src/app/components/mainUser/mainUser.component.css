@@ -1,0 +1,35 @@
+.separator {
+    color: red; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    margin: 5px 0; /* Espaciado alrededor del icono */
+}
+
+.text-custom{
+    font-size: 20px;
+}
+
+/* Estilos para los botones de filtro */
+.filter-btn {
+    background-color: transparent; /* Fondo transparente */
+    color: black; /* Color de texto inicial */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: none; /* Sin borde */
+    margin-top: 10px;
+    border-radius: 0; /* Sin bordes redondeados */
+    padding: 5px 15px; /* Ajuste de relleno */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilos para los botones de filtro al pasar el mouse */
+.filter-btn:hover {
+    background-color: rgb(220, 53, 69); /* Fondo rojo */
+    color: white; /* Texto blanco */
+}
+
+/* Estilos para los botones de filtro seleccionados */
+.filter-btn.active {
+    background-color: rgb(220, 53, 69); /* Fondo rojo */
+    color: white; /* Texto blanco */
+}

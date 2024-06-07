@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #003c94; /* Blue color */
+}
+.logo img {/* Adjust the max-width as needed */
+    height: auto;
+    width: 300px;
+    margin-left: 100px;
+}
+
+.nav-link {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0033A0; /* Blue color */
+}
+
+.bg-custom-color {
+    background-color: rgba(23, 67, 197, 0.8); /* Cambia esto al color que desees */
+}
+
+
+nav{
+    position: fixed;
+    z-index: 1000; /* Asegura que la navbar esté sobre otros elementos */
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+  }
+  
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+  
+.navbar-nav li a {
+    cursor:pointer;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li.active a {
+    color: yellow;
+    }    
+
+/* Estilos de animacion y sombreado */
+
+.navbar-nav li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente inicial */
+    transition: background-color 0.3s ease; /* Transición suave de 0.3 segundos */
+    z-index: -1; /* Colocar detrás del texto */
+}
+
+.navbar-nav li.active a::after,
+.navbar-nav li a:hover::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro */
+    transition: background-color 0.3s ease; /* Transición suave de 0.3 segundos */
+    z-index: -1; /* Colocar detrás del texto */
+}
+
+  

@@ -1,0 +1,24 @@
+.back-black {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+ 
+h2{
+    text-align: center;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-custom{
+    text-align: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.separator {
+    color: red; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    margin: 5px 0; /* Espaciado alrededor del icono */
+    text-align: center;
+}

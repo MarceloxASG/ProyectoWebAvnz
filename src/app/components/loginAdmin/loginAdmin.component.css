@@ -1,0 +1,30 @@
+.bg-custom {
+    background-color: rgba(44, 44, 44, 0.7);
+}
+
+.back-black {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.text-custom{
+    color: white;
+}
+
+.sub-custom{
+    color: white;
+}
+
+.sub-custom:hover{
+    cursor: pointer;
+    color: darkgray;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.separator {
+    color: red; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    margin: 5px 0; /* Espaciado alrededor del icono */
+}

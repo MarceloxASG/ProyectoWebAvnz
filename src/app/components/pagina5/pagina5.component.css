@@ -1,0 +1,10 @@
+.text-custom {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.separator {
+    color: red; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    margin: 5px 0; /* Espaciado alrededor del icono */
+}
