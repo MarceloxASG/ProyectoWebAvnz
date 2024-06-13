@@ -1,1 +1,17 @@
+# Entorno virtual
 myvenv/
+
+# Archivos de configuración de Python
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración de Django
+local_settings.py
+
+# Otros archivos que no deseas versionar
+*.sqlite3
+*.db
