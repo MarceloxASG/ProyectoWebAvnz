@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg bg-custom-color">
+    <div class="container-fluid">
+        <div class="logo">
+            <img src="assets/angular.png" alt="IKOMI Perú" class="img-fluid">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li [class.active]="activeSection === 'home'">
+                    <a (click)="scrollTo('home')" routerLinkActive="active">Home</a>
+                </li>
+                <li [class.active]="activeSection === 'pagina1'">
+                    <a (click)="scrollTo('pagina1')" routerLinkActive="active">Nosotros</a>
+                </li>
+                <li [class.active]="activeSection === 'pagina2'">
+                    <a (click)="scrollTo('pagina2')" routerLinkActive="active">Servicios</a>
+                </li>
+                <li [class.active]="activeSection === 'pagina3'">
+                    <a (click)="scrollTo('pagina3')" routerLinkActive="active">Producto</a>
+                </li>
+                <li [class.active]="activeSection === 'pagina4'">
+                    <a (click)="scrollTo('pagina4')" routerLinkActive="active">Marcas</a>
+                </li>
+                <li [class.active]="activeSection === 'pagina5'">
+                    <a (click)="scrollTo('pagina5')" routerLinkActive="active">Contáctenos</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+</nav>
