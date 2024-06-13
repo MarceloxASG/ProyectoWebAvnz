@@ -15,7 +15,7 @@
     Para mantener las dependencias del proyecto aisladas, se recomienda crear un entorno virtual. Puedes hacerlo utilizando `virtualenv` o `venv`. Por ejemplo, con `venv`:
 
     ```
-    python -m venv myenv*
+    python -m venv myenv
     ```
 
 Luego, activa el entorno virtual:
