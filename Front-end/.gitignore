@@ -1,0 +1,30 @@
+# Dependencias de Node.js
+node_modules/
+
+# Dependencias de Angular
+dist/
+
+# Archivos de entorno
+.env
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de compilación
+lib-cov
+coverage
+*.lcov
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDEs
+.idea/
+.vscode/
+
+# Otros
+*.swp
+*~
