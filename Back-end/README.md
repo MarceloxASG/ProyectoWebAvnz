@@ -4,15 +4,8 @@
 
 ## Configuración del Entorno
 
-1. **Instalación de Django:**
-   Antes de comenzar, asegúrate de tener Django instalado en tu sistema. Puedes instalarlo utilizando pip:
-
-    ```
-    pip install django
-    ```
-
-2. **Creación del Entorno Virtual:**
-    Para mantener las dependencias del proyecto aisladas, se recomienda crear un entorno virtual. Puedes hacerlo utilizando `virtualenv` o `venv`. Por ejemplo, con `venv`:
+1. **Creación del Entorno Virtual:**
+   Para mantener las dependencias del proyecto aisladas, se recomienda crear un entorno virtual. Puedes hacerlo utilizando `virtualenv` o `venv`. Por ejemplo, con `venv`:
 
     ```
     python -m venv myenv
@@ -32,9 +25,24 @@ Luego, activa el entorno virtual:
   source myenv/bin/activate
   ```
 
+2. **Instalación de Django:**
+    Una vez activado, asegúrate de tener Django instalado en tu sistema. Puedes instalarlo utilizando pip:
+
+    ```
+    pip install django
+    ```
+
+3. **Instalacion de las dependencias requeridas:**
+    Después de haber instalado django, se debe instalar las siguientes dependecias:
+
+    ```
+    pip install appdirs asgiref bcrypt certifi cffi chardet cryptography defusedxml distlib Django django-allauth django-cors-headers django-extensions django-widget-tweaks filelock idna mysql-connector-python mysqlclient oauthlib Pillow pycparser PyJWT python3-openid pytz requests requests-oauthlib six sqlparse stripe urllib3 virtualenv virtualenvwrapper-win
+
+    ```
+
 ## Ejecución del Servidor
 
-  - Una vez que el entorno esté configurado, puedes iniciar el servidor Django. Asegúrate de estar en la carpeta raíz del proyecto (donde se encuentra `manage.py`) y ejecuta el siguiente comando:
+  - Una vez que el entorno esté configurado, y las dependencias necesarias instaladas, puedes iniciar el servidor Django. Asegúrate de estar en la carpeta raíz del proyecto (donde se encuentra `manage.py`) y ejecuta el siguiente comando:
 
     ```
     python manage.py runserver

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,9 @@ import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { mainUserComponent } from './components/mainUser/mainUser.component';
 import { mainAdminComponent } from './components/mainAdmin/mainAdmin.component';
-import { Pagina5Component } from './components/pagina5/pagina5.component';
+import { registerUserComponent } from './components/registerUser/registerUser.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,11 +26,13 @@ import { Pagina5Component } from './components/pagina5/pagina5.component';
     FooterComponent,
     mainUserComponent,
     mainAdminComponent,
-    Pagina5Component
+    registerUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

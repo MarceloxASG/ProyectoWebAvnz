@@ -6,11 +6,13 @@ import { loginUserComponent } from './components/loginUser/loginUser.component';
 import { loginAdminComponent } from './components/loginAdmin/loginAdmin.component';
 import { mainUserComponent } from './components/mainUser/mainUser.component';
 import { mainAdminComponent } from './components/mainAdmin/mainAdmin.component';
+import { registerUserComponent } from './components/registerUser/registerUser.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'user', component: loginUserComponent },
+  { path: 'registerUser', component: registerUserComponent },
   { path: 'admin', component: loginAdminComponent },
   { path: 'mainUser', component: mainUserComponent },
   { path: 'mainAdmin', component: mainAdminComponent },

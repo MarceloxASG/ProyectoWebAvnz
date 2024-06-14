@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
+import { catchError, tap } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-pagina1',
@@ -7,10 +10,36 @@ import { Router } from '@angular/router';
   styleUrl: './loginUser.component.css'
 })
 export class loginUserComponent {
-  constructor(private router: Router) {}
+  credentials = {
+    username: '',
+    password: ''
+  };
+  error: string | null = null;
+  
+  constructor(private authService: AuthService, private router: Router) {}
 
   login(): void {
-    // Aquí puedes añadir la lógica de autenticación
-    this.router.navigate(['/mainUser']);
+    if (!this.credentials.username || !this.credentials.password) {
+      this.error = 'Por favor, ingresa tu nombre de usuario y contraseña.';
+      return;
+    }
+
+    this.authService.login(this.credentials)
+    .pipe(
+      tap((response: any) => {
+        if (response && response.token) { // Asegúrate de tener una condición para verificar el éxito del login
+          console.log('Login successful', response);
+          this.router.navigate(['/mainUser']); // Redirige al usuario a la página principal después del inicio de sesión
+        } else {
+          this.error = 'Usuario o contraseña incorrectos';
+        }
+      }),
+      catchError((error: any) => {
+        console.error('Error logging in', error);
+        this.error = 'Usuario o contraseña incorrectos'; // Maneja el mensaje de error para mostrar al usuario
+        return throwError(error); // Reenviar el error para manejarlo en otro lugar si es necesario
+      })
+    )
+    .subscribe();
   }
 }
