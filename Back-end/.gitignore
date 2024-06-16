@@ -11,7 +11,3 @@ myvenv/
 
 # Archivos de configuración de Django
 local_settings.py
-
-# Otros archivos que no deseas versionar
-*.sqlite3
-*.db
