@@ -12,11 +12,17 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
+*.log
 
 # Archivos de compilación
 lib-cov
 coverage
 *.lcov
+*.ngc.json
+tsconfig.json.proj
+*.bak
+*.lock
 
 # Archivos de sistema operativo
 .DS_Store
