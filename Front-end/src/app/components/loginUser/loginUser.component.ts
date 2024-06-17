@@ -27,7 +27,7 @@ export class loginUserComponent {
     this.authService.login(this.credentials)
     .pipe(
       tap((response: any) => {
-        if (response && response.token) { // Asegúrate de tener una condición para verificar el éxito del login
+        if (response && response.token) { // Condición para verificar el éxito del login
           console.log('Login successful', response);
           this.router.navigate(['/mainUser']); // Redirige al usuario a la página principal después del inicio de sesión
         } else {
@@ -37,7 +37,7 @@ export class loginUserComponent {
       catchError((error: any) => {
         console.error('Error logging in', error);
         this.error = 'Usuario o contraseña incorrectos'; // Maneja el mensaje de error para mostrar al usuario
-        return throwError(error); // Reenviar el error para manejarlo en otro lugar si es necesario
+        return throwError(error); // Se reenvia el error para manejarlo en otro lugar
       })
     )
     .subscribe();
