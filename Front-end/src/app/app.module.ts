@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { loginUserComponent } from './components/loginUser/loginUser.component';
-import { loginAdminComponent } from './components/loginAdmin/loginAdmin.component';
+import { LoginUserComponent } from './components/loginUser/loginUser.component';
+import { LoginAdminComponent } from './components/loginAdmin/loginAdmin.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { mainUserComponent } from './components/mainUser/mainUser.component';
@@ -20,8 +20,8 @@ import { registerUserComponent } from './components/registerUser/registerUser.co
   declarations: [
     AppComponent,
     HomeComponent,
-    loginUserComponent,
-    loginAdminComponent,
+    LoginUserComponent,
+    LoginAdminComponent,
     NavmenuComponent,
     FooterComponent,
     mainUserComponent,

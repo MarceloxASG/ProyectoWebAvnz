@@ -9,7 +9,7 @@ import { throwError } from 'rxjs';
   templateUrl: './loginUser.component.html',
   styleUrl: './loginUser.component.css'
 })
-export class loginUserComponent {
+export class LoginUserComponent {
   credentials = {
     username: '',
     password: ''
@@ -28,8 +28,12 @@ export class loginUserComponent {
     .pipe(
       tap((response: any) => {
         if (response && response.token) { // Condición para verificar el éxito del login
-          console.log('Login successful', response);
-          this.router.navigate(['/mainUser']); // Redirige al usuario a la página principal después del inicio de sesión
+          if (response.message.includes('Admin login successful')) {
+            this.error = 'Esta es cuenta de administrador';
+          } else if (response.message.includes('Employee login successful')) {
+            console.log('Login successful', response);
+            this.router.navigate(['/mainUser']); // Redirige al usuario a la página principal después del inicio de sesión
+          }
         } else {
           this.error = 'Usuario o contraseña incorrectos';
         }
