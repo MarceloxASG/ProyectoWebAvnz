@@ -36,7 +36,7 @@ Luego, activa el entorno virtual:
     Después de haber instalado django, se debe instalar las siguientes dependecias:
 
     ```
-    pip install appdirs asgiref bcrypt certifi cffi chardet cryptography defusedxml distlib Django django-allauth django-cors-headers django-extensions django-widget-tweaks filelock idna mysql-connector-python mysqlclient oauthlib Pillow pycparser PyJWT python3-openid pytz requests requests-oauthlib six sqlparse stripe urllib3 virtualenv virtualenvwrapper-win
+    pip install appdirs asgiref bcrypt certifi cffi chardet cryptography defusedxml distlib Django django-allauth django-cors-headers django-extensions django-widget-tweaks djangorestframework filelock idna mysql-connector-python mysqlclient oauthlib Pillow pycparser PyJWT python3-openid pytz requests requests-oauthlib six sqlparse stripe urllib3 virtualenv virtualenvwrapper-win
 
     ```
 
