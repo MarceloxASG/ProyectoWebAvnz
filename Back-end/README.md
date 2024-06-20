@@ -8,7 +8,7 @@
    Para mantener las dependencias del proyecto aisladas, se recomienda crear un entorno virtual. Puedes hacerlo utilizando `virtualenv` o `venv`. Por ejemplo, con `venv`:
 
     ```
-    python -m venv myenv
+    python -m venv myvenv
     ```
 
 Luego, activa el entorno virtual:
@@ -16,13 +16,13 @@ Luego, activa el entorno virtual:
 - En Windows:
 
   ```
-  myenv\Scripts\activate
+  myvenv\Scripts\activate
   ```
 
 - En macOS y Linux:
 
   ```
-  source myenv/bin/activate
+  source myvenv/bin/activate
   ```
 
 2. **Instalación de Django:**
