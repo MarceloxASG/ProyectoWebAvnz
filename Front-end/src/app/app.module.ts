@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { mainUserComponent } from './components/mainUser/mainUser.component';
 import { mainAdminComponent } from './components/mainAdmin/mainAdmin.component';
 import { registerUserComponent } from './components/registerUser/registerUser.component';
+import { PostModalComponent } from './components/post-modal/post-modal.component';
 
 
 
@@ -26,7 +27,8 @@ import { registerUserComponent } from './components/registerUser/registerUser.co
     FooterComponent,
     mainUserComponent,
     mainAdminComponent,
-    registerUserComponent
+    registerUserComponent,
+    PostModalComponent
   ],
   imports: [
     BrowserModule,
