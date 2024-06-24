@@ -25,16 +25,16 @@ export class mainUserComponent implements OnInit {
   }
 
   openPostModal(post?: Post): void {
-  //  this.modalContainer.clear();
-  //  const factory = this.resolver.resolveComponentFactory(PostModalComponent);
-  //  const componentRef = this.modalContainer.createComponent(factory);
-  //  if (post) {
-  //    componentRef.instance.post = { ...post };
-  //    componentRef.instance.editMode = true;
-  //  }
-  //  componentRef.instance.closeModal = (result: string) => {
-  //    this.modalContainer.clear();
-  //    this.loadPosts();
-  //  };
+    this.modalContainer.clear();
+    const factory = this.resolver.resolveComponentFactory(PostModalComponent);
+    const componentRef = this.modalContainer.createComponent(factory);
+    if (post) {
+      componentRef.instance.post = { ...post };
+      componentRef.instance.editMode = true;
+    }
+    componentRef.instance.closeModal = (result: string) => {
+      this.modalContainer.clear();
+      this.loadPosts();
+    };
   }
 }
