@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
 import { PostService, Post } from '../../post.service';
 import { PostModalComponent } from '../post-modal/post-modal.component';
+import { AuthService } from '../../auth.service'; // Importar el AuthService
+import { Router } from '@angular/router'; // Importar Router
 
 @Component({
   selector: 'app-mainUser',
@@ -13,7 +15,9 @@ export class mainUserComponent implements OnInit {
 
   constructor(
     private PostService: PostService,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    private authService: AuthService, // Inyectar AuthService
+    private router: Router // Inyectar Router
   ) {}
 
   ngOnInit(): void {
@@ -36,5 +40,12 @@ export class mainUserComponent implements OnInit {
       this.modalContainer.clear();
       this.loadPosts();
     };
+  }
+
+  logout(): void {
+    this.authService.logout().subscribe(response => {
+      localStorage.removeItem('token'); // Eliminar el token del localStorage
+      this.router.navigate(['/login']); // Redirigir al login
+    });
   }
 }

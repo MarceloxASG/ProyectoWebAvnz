@@ -20,4 +20,9 @@ export class AuthService {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http.post(`${this.apiUrl}/login/`, credentials, { headers });
   }
+
+  logout(): Observable<any> {
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    return this.http.post(`${this.apiUrl}/logout/`, {}, { headers });
+  }
 }
